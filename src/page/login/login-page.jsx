@@ -12,7 +12,7 @@ export default function LoginPage() {
         e.preventDefault();
 
         try {
-            const response = await axios.post('https://fashion-backend-r8hh.onrender.com/test/login', { username, password });
+            const response = await axios.post('https://fashion-backend-r8hh.onrender.com/test/logins', { username, password });
             const { token } = response.data;
 
             localStorage.setItem('token', token);
