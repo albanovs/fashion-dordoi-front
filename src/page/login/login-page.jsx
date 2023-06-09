@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { Register } from './register-page';
 
 export default function LoginPage() {
     const [username, setUsername] = useState('');
@@ -29,7 +28,6 @@ export default function LoginPage() {
 
     return (
         <section className="bg-slate-900">
-            <Register/>
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto h-screen w-full lg:py-0">
                 <div className="w-full grid place-items-center">
                     <a href="/" className="text-white flex items-center mb-6 text-2xl font-semibold text-gray-900">

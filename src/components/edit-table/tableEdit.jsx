@@ -16,7 +16,7 @@ const EditableTable = () => {
         try {
             await Promise.all(
                 responseData.map((elem) =>
-                    axios.patch(`${url}/test/mymodels/${elem._id}`, {
+                    axios.put(`${url}/test/mymodels/${elem._id}`, {
                         monako: inputValues[elem._id]?.monako || elem.monako,
                         lider: inputValues[elem._id]?.lider || elem.lider,
                         fenix: inputValues[elem._id]?.fenix || elem.fenix,
