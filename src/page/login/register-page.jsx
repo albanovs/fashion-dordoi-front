@@ -9,7 +9,7 @@ export const Register = () => {
         e.preventDefault();
 
         try {
-            await axios.post('http://localhost:4000/test/register', { username, password });
+            await axios.post('https://fashion-backend-r8hh.onrender.com/test/register', { username, password });
             console.log('Регистрация прошла успешно');
         } catch (error) {
             console.error(error);

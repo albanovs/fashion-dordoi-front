@@ -6,7 +6,7 @@ import { BsWhatsapp } from 'react-icons/bs'
 export default function ShowTableWA() {
 
     const [responseData, setResponseData] = useState([]);
-    const url = 'https://dordoi-service.onrender.com';
+    const url = 'https://fashion-backend-r8hh.onrender.com';
 
     useEffect(() => {
         const fetchData = async () => {

@@ -4,7 +4,7 @@ import { BsInstagram } from 'react-icons/bs';
 
 export default function ShowTable() {
     const [responseData, setResponseData] = useState([]);
-    const url = 'https://dordoi-service.onrender.com';
+    const url = 'https://fashion-backend-r8hh.onrender.com';
 
     useEffect(() => {
         const fetchData = async () => {

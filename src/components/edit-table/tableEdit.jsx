@@ -9,7 +9,7 @@ const EditableTable = () => {
     const [inputValues, setInputValues] = useState({});
 
     const [responseData, setResponseData] = useState([]);
-    const url = 'https://dordoi-service.onrender.com';
+    const url = 'https://fashion-backend-r8hh.onrender.com';
 
     const handleSubmit = async (e) => {
         e.preventDefault();
