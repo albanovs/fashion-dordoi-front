@@ -75,7 +75,7 @@ const EditableTg = () => {
 
         if (req) {
             try {
-                const response = await axios.post(url + '/slot/telegram', {
+                const response = await axios.post(url + '/insert/telegram', {
                     account: req
                 });
                 console.log(response.data);
