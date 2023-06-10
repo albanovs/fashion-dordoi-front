@@ -46,7 +46,7 @@ export default function ShowTableTg() {
                     {
                         responseData.map(elem => (
                             <tr key={elem._id} data-elem={elem} className='border'>
-                                {elem.num === 1 && <th rowSpan='10' className='bg-sky-100/40 text-[6px] lg:text-[10px]'>{elem.account}</th>}
+                                {elem.num === 1 && <th rowSpan='10' className='bg-sky-100/40 text-[6px] lg:text-[10px]'><a href={`https://t.me/${elem.account}`}>{elem.account}</a></th>}
                                 <td className='lg:text-[12px] border text-[6px]'>{elem.num}</td>
                                 <td className={`lg:text-[12px] text-[6px] ${elem.monako === 'слот недоступен' ? 'bg-rose-300' : elem.monako === 'доступный слот' ? 'bg-emerald-300' : ''} border`}>
                                     {elem.monako}

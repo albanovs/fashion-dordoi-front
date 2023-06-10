@@ -55,7 +55,9 @@ export default function ShowTable() {
                                     rowSpan='5'
                                     className='bg-sky-100/40  pl-2 pr-2 text-[6px] lg:text-[10px]'
                                 >
-                                    {elem.account}
+                                    <a href={`https://instagram.com/${elem.account}`}>
+                                        {elem.account}
+                                    </a>
                                 </th>
                             )}
                             <td className='lg:text-[12px] border text-[6px]'>{elem.num}</td>
