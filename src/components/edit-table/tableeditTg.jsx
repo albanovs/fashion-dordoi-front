@@ -113,7 +113,7 @@ const EditableTg = () => {
                         {
                             responseData.map(elem => (
                                 <tr key={elem._id} data-elem={elem} className='border'>
-                                    {elem.num === 1 && <th rowSpan='10' className='pl-2 pr-2 text-[6px] lg:text-[10px]'>{elem.account}</th>}
+                                    {elem.num === 1 && <th rowSpan='20' className='pl-2 pr-2 text-[6px] lg:text-[10px]'>{elem.account}</th>}
                                     <td className='lg:text-[12px] border text-[8px]'>{elem.num}</td>
                                     <td className={`text-[12px] ${inputValues[elem._id]?.monako === 'слот недоступен' ? 'bg-rose-300' : inputValues[elem._id]?.monako === 'доступный слот' ? 'bg-emerald-300' : ''} border`}>
                                         <input
