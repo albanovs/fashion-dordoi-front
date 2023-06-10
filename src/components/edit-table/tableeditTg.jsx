@@ -103,8 +103,8 @@ const EditableTg = () => {
                         <tr>
                             <th className='lg:text-[14px] text-[8px] text-white p-2 border'><BsTelegram /></th>
                             <th className='lg:text-[14px] text-[8px] text-white w-[30px] border'>№</th>
-                            <th className='lg:text-[14px] text-[8px] text-white w-[300px] border'>Лидер</th>
                             <th className='lg:text-[14px] text-[8px] text-white w-[300px] border'>Монако</th>
+                            <th className='lg:text-[14px] text-[8px] text-white w-[300px] border'>Лидер</th>
                             <th className='lg:text-[14px] text-[8px] text-white w-[300px] border'>Феникс</th>
                             <th className='lg:text-[14px] text-[8px] text-white w-[300px] border'>Туран</th>
                         </tr>
