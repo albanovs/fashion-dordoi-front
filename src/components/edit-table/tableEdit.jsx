@@ -25,6 +25,7 @@ const EditableTable = () => {
                 )
             );
             fetchData();
+            window.location.reload()
             console.log('Data updated successfully');
 
             const updatedInputValues = { ...inputValues };

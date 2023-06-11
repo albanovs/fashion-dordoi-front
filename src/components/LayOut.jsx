@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { AiOutlineLogout, AiOutlineUser, AiOutlineTool, AiOutlineBarChart, AiOutlineClose } from 'react-icons/ai'
+import { FaUsers, FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import { RxHamburgerMenu } from 'react-icons/rx'
 import { BsInstagram } from 'react-icons/bs'
 import { FaTelegram } from 'react-icons/fa'
@@ -10,6 +11,11 @@ import { useNavigate } from "react-router-dom";
 export const LayOut = ({ children }) => {
 
     const [showNavbar, setShowNavbar] = useState(true)
+    const [select, setSelect] = useState(false)
+
+    const handleSelect = () => {
+        setSelect(!select)
+    }
 
     const handleShowNavbar = () => {
         setShowNavbar(!showNavbar)
@@ -22,7 +28,7 @@ export const LayOut = ({ children }) => {
         console.log('Выход выполнен успешно');
     };
 
-    
+
 
     const navigate = useNavigate();
 
@@ -65,16 +71,31 @@ export const LayOut = ({ children }) => {
                                 <span className="flex-1 ml-3 whitespace-nowrap">whatsapp слот</span>
                             </NavLink>
                         </li>
-                        <li>
-                            <NavLink to='/settings' className="flex items-center p-2 rounded-lg hover:text-black hover:bg-gray-100">
-                                <AiOutlineTool size={25} />
-                                <span className="flex-1 ml-3 whitespace-nowrap">Настройки</span>
-                            </NavLink>
+                        <li onClick={handleSelect}>
+                            <div className="flex items-center p-2 rounded-lg hover:text-black hover:bg-gray-100 cursor-pointer">
+                                <FaUsers size={25} />
+                                <span className="flex-1 ml-3 whitespace-nowrap flex items-center">Отделы {select ? <FaAngleUp className="ml-2" /> : <FaAngleDown className="ml-2" />}</span>
+                            </div>
+                            {
+                                select && <div className="flex flex-col w-full gap-2 items-center">
+                                    <div><NavLink className="p-2 rounded-lg hover:text-black hover:bg-gray-100">Монако</NavLink></div>
+                                    <div><NavLink className="p-2 rounded-lg hover:text-black hover:bg-gray-100">Лидер</NavLink></div>
+                                    <div><NavLink className="p-2 rounded-lg hover:text-black hover:bg-gray-100">Феникс</NavLink></div>
+                                    <div><NavLink className="p-2 rounded-lg hover:text-black hover:bg-gray-100">Туран</NavLink></div>
+                                </div>
+                            }
+
                         </li>
                         <li>
                             <NavLink className="flex items-center p-2 rounded-lg hover:text-black hover:bg-gray-100">
                                 <AiOutlineUser size={25} />
                                 <span className="flex-1 ml-3 whitespace-nowrap">Коллектив</span>
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink to='/settings' className="flex items-center p-2 rounded-lg hover:text-black hover:bg-gray-100">
+                                <AiOutlineTool size={25} />
+                                <span className="flex-1 ml-3 whitespace-nowrap">Настройки</span>
                             </NavLink>
                         </li>
                         <li>
